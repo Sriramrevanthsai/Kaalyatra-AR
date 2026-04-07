@@ -2,7 +2,7 @@
 // GEMINI API KEY
 // ==========================
 
-const API_KEY = "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";
+const API_KEY = "sk-25";
 
 
 // ==========================

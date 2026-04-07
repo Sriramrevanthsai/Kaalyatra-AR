@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+
+<title>KaalYatra ISRO Experience</title>
+
+<script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+
+<script src="app.js"></script>
+
+</head>
+
+<body>
+
+<a-scene>
+
+<!-- BACKGROUND -->
+
+<a-assets>
+
+<img id="isrobg" src="images/isro.png">
+
+</a-assets>
+
+<a-sky src="#isrobg"></a-sky>
+
+
+<!-- FLOOR -->
+
+<a-plane
+rotation="-90 0 0"
+width="50"
+height="50"
+color="#eeeeee">
+</a-plane>
+
+
+<!-- TITLE -->
+
+<a-text
+value="KaalYatra - ISRO Journey"
+position="-4 10 -5"
+color="black"
+width="12">
+</a-text>
+
+
+<!-- ROCKET MODEL -->
+
+<a-entity
+gltf-model="models/rocket.glb"
+position="-10 0 -10"
+scale="10 10 10">
+</a-entity>
+
+<a-text
+value="Early ISRO Rocket"
+position="-10 5 -10"
+align="center"
+color="black">
+</a-text>
+
+
+<!-- BICYCLE MODEL -->
+
+<a-entity
+gltf-model="models/bicycle.glb"
+position="13 0 -10"
+scale="0.5 1 1">
+</a-entity>
+
+<a-text
+value="Rocket Parts Transport Bicycle"
+position="10 3 -10"
+align="center"
+color="black">
+</a-text>
+
+
+<!-- APJ ABDUL KALAM (3D MODEL) -->
+
+<a-entity
+id="kalam"
+class="clickable"
+gltf-model="models/kalam.glb"
+position="0 0 -4"
+scale="4 6 4">
+</a-entity>
+
+<a-text
+value="APJ Abdul Kalam"
+position="0 6 -4"
+align="center"
+color="black">
+</a-text>
+
+
+<!-- VIKRAM SARABHAI PHOTO -->
+
+<a-plane
+id="sarabhai"
+class="clickable"
+src="images/vikram.png"
+position="-3 2 -4"
+width="1.5"
+height="2">
+</a-plane>
+
+<a-text
+value="Vikram Sarabhai"
+position="-3 3.3 -4"
+align="center"
+color="black">
+</a-text>
+
+
+<!-- HOMI BHABHA PHOTO -->
+
+<a-plane
+id="bhabha"
+class="clickable"
+src="images/bhaba.png"
+position="3 2 -4"
+width="1.5"
+height="2">
+</a-plane>
+
+<a-text
+value="Homi Bhabha"
+position="3 3.3 -4"
+align="center"
+color="black">
+</a-text>
+
+
+<!-- CAMERA WITH RAYCASTER -->
+
+<a-entity camera
+position="0 1.6 3"
+cursor="rayOrigin: mouse"
+raycaster="objects: .clickable">
+</a-entity>
+
+</a-scene>
+
+</body>
+</html>
